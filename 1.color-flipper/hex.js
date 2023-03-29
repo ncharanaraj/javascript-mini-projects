@@ -6,9 +6,12 @@ const btn = document.getElementById("btn");
 btn.addEventListener("click", function () {
   let randonHexNum = "#";
   for (var i = 0; i < 6; i++) {
-    randonHexNum += hex[Math.floor(Math.random() * hex.length)];
+    randonHexNum += hex[randNum()];
   }
-  console.log(randonHexNum);
   document.body.style.backgroundColor = randonHexNum;
   color.textContent = randonHexNum;
 });
+
+function randNum() {
+  return Math.floor(Math.random() * hex.length);
+}
