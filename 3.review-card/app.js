@@ -49,8 +49,8 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 
 // a person showup
-function showPerson(person) {
-  const item = reviews[person];
+function showPerson() {
+  const item = reviews[currentItem];
   image.src = item.img;
   author.innerText = item.name;
   job.innerText = item.job;
@@ -63,7 +63,7 @@ prevBtn.addEventListener("click", function () {
   if (currentItem < 0) {
     currentItem = reviews.length - 1;
   }
-  showPerson(currentItem);
+  showPerson();
 });
 
 // next-btn
@@ -72,7 +72,7 @@ nextBtn.addEventListener("click", function () {
   if (currentItem > reviews.length - 1) {
     currentItem = 0;
   }
-  showPerson(currentItem);
+  showPerson();
 });
 
 // random person
