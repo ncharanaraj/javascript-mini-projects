@@ -10,3 +10,7 @@ const closeBtn = document.querySelector(".close-btn");
 modalBtn.addEventListener("click", () => {
   modalOverlay.classList.toggle("open-modal");
 });
+
+closeBtn.addEventListener("click", () => {
+  modalOverlay.classList.remove("open-modal");
+});
